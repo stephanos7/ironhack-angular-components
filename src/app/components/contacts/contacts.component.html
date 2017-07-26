@@ -1,0 +1,18 @@
+{{theCounter.count}}
+<button (click)="incrementCounter()">Increment</button>
+
+<table>
+  <tr>
+    <th> Id</th>
+    <th> Name </th>
+    <th colspan="2"> Details </th>
+  </tr>
+  <tr *ngFor="let contact of contacts">
+    <td> {{ contact.id }} </td>
+    <td> {{ contact.name }} </td>
+    <td>
+      <a [routerLink]="['/contacts', contact.id]">Details</a>
+      <button (click)="viewDetails(contact.id)">Details</button>
+    </td>
+  </tr>
+</table>
