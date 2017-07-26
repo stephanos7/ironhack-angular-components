@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CounterService } from '../../services/counter.service';
 
 @Component({
   selector: 'app-contacts',
@@ -15,16 +14,12 @@ export class ContactsComponent implements OnInit {
     { id: 302, name: 'Max' }
   ];
 
-  constructor(private router: Router, private theCounter: CounterService) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   viewDetails(id) {
     this.router.navigate(['contacts', id]);
-  }
-
-  incrementCounter() {
-    this.theCounter.increment();
   }
 }
