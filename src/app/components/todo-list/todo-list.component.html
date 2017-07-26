@@ -1,0 +1,7 @@
+<h2>My todos</h2>
+
+<ul>
+  <li *ngFor="let currentTodo of todos">
+    <app-todo-item [todo]="currentTodo" (onDelete)="removeTodo($event)"></app-todo-item>
+  </li>
+</ul>
